@@ -4,7 +4,7 @@ export default function SelfFrame() {
     const response = await fetch(
       "https://child-poc-iframe.vercel.app/api/getToken",
       {
-        method: "POST",
+        method: "GET",
       },
     );
     console.log(JSON.stringify(response));
