@@ -7,7 +7,10 @@ export default function SelfFrame() {
         method: "GET",
       },
     );
-    console.log(JSON.stringify(response.headers));
+    const headers = response.headers;
+    headers.forEach((a, b) => {
+      console.log(a, b);
+    });
   }, []);
   useEffect(() => {
     formPost();
