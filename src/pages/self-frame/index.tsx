@@ -7,7 +7,10 @@ export default function SelfFrame() {
         method: "GET",
       },
     );
-    const json = await response.json();
+    const json = (await response.json()) as {
+      message?: string;
+      location?: string;
+    };
     console.log({ json });
   }, []);
   useEffect(() => {
