@@ -1,5 +1,7 @@
 import { useCallback, useEffect } from "react";
+import { useRouter } from "next/router";
 export default function SelfFrame() {
+  const router = useRouter();
   const formPost = useCallback(async () => {
     const response = await fetch(
       "https://child-poc-iframe.vercel.app/api/getToken",
@@ -11,7 +13,9 @@ export default function SelfFrame() {
       message?: string;
       location?: string;
     };
-    console.log({ json });
+    if (json.location) {
+      router.replace(json.location);
+    }
   }, []);
   useEffect(() => {
     formPost();
