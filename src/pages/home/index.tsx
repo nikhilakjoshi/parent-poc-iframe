@@ -5,7 +5,7 @@ export default function Home() {
       <iframe
         allow="web-share"
         src="https://child-poc-iframe.vercel.app/home"
-        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+        sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-storage-access-by-user-activation"
         className="h-[50vh] w-[50dvw] border"
       ></iframe>
     </>
