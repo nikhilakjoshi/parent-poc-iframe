@@ -5,7 +5,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return {
     redirect: {
-      destination: "http://localhost:3001/setcookie",
+      destination: "https://child-poc-iframe.vercel.app/setcookie",
       permanent: true,
     },
   };
