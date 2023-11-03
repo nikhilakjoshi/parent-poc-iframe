@@ -1,6 +1,6 @@
-import { GetServerSideProps } from "next";
+import type { GetServerSidePropsContext } from "next";
 
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+export const getServerSideProps = ({ res }: GetServerSidePropsContext) => {
   res.setHeader(
     "Set-Cookie",
     `token=${new Date()
